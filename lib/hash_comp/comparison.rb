@@ -1,4 +1,4 @@
-module HashDiff
+module HashComp
   class Comparison
     def initialize(left, right)
       @left  = left

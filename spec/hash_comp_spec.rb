@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe HashDiff do
+describe HashComp do
   describe ".diff" do
     subject { described_class.diff left, right }
 

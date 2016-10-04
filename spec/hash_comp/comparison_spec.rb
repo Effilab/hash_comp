@@ -1,11 +1,11 @@
 require "spec_helper"
 
-describe HashDiff::Comparison do
+describe HashComp::Comparison do
 
   let(:app_v1_properties) { { foo: 'bar',  bar: 'foo',  nested: { foo: 'bar',  bar: { one: 'foo1' } }, num: 1 } }
   let(:app_v2_properties) { { foo: 'bar2', bar: 'foo2', nested: { foo: 'bar2', bar: { two: 'foo2' } }, word: 'monkey' } }
 
-  subject(:comparison) { HashDiff::Comparison.new(app_v1_properties, app_v2_properties) }
+  subject(:comparison) { HashComp::Comparison.new(app_v1_properties, app_v2_properties) }
 
   describe "#diff" do
     subject { comparison.diff }

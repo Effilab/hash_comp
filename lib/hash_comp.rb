@@ -1,11 +1,11 @@
-require "hash_diff/version"
-require "hash_diff/comparison"
+require "hash_comp/version"
+require "hash_comp/comparison"
 
-module HashDiff
+module HashComp
   def self.patch!
     Hash.class_eval do
       def diff(right)
-        HashDiff.left_diff(self, right)
+        HashComp.left_diff(self, right)
       end
     end unless Hash.new.respond_to?(:diff)
   end

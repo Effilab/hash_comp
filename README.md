@@ -1,4 +1,4 @@
-# HashDiff
+# HashComp
 [![Build Status](https://travis-ci.org/CodingZeal/hash_diff.png?branch=master)](https://travis-ci.org/CodingZeal/hash_diff) [![Code Climate](https://codeclimate.com/github/CodingZeal/hash_diff.png)](https://codeclimate.com/github/CodingZeal/hash_diff) [![Gem Version](https://badge.fury.io/rb/hash_diff.png)](http://badge.fury.io/rb/hash_diff)
 
 Deep comparison of Ruby Hash objects
@@ -7,7 +7,7 @@ Deep comparison of Ruby Hash objects
 
 Add this line to your application's Gemfile:
 
-    gem 'hash_diff'
+    gem 'hash_comp'
 
 And then execute:
 
@@ -15,7 +15,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install hash_diff
+    $ gem install hash_comp
 
 ## Usage
 
@@ -46,7 +46,7 @@ Easily find the differences between two Ruby hashes.
     word: 'monkey'
   }
 
-  hash_diff = HashDiff::Comparison.new( left, right )
+  hash_diff = HashComp::Comparison.new( left, right )
 ```
 
 Comparison#diff returns the left and right side differences
@@ -70,16 +70,16 @@ Comparison#right_diff returns only the right side differences
 You can also use these shorthand methods
 
 ```ruby
-  HashDiff.diff(left, right)
-  HashDiff.left_diff(left, right)
-  HashDiff.right_diff(left, right)
+  HashComp.diff(left, right)
+  HashComp.left_diff(left, right)
+  HashComp.right_diff(left, right)
 ```
 
-Hash#diff is not provided by default, and monkey patching is frowned upon by some, but to provide a one way shorthand call `HashDiff.patch!`
+Hash#diff is not provided by default, and monkey patching is frowned upon by some, but to provide a one way shorthand call `HashComp.patch!`
 
 ```ruby
   # run prior to implementation
-  HashDiff.patch!
+  HashComp.patch!
 
   left  = { foo: 'bar', num: 1 }
   right = { foo: 'baz', num: 1 }
